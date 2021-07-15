@@ -1,0 +1,218 @@
+:root {
+    --dark-font: 'Pattaya', sans-serif;
+    --light-font: 'Roboto', sans-serif;
+    --dark-color: #a06cd5;
+    --light-color: #c19ee0;
+    --super-dark-color: #6247aa;
+    --off-white: #e5e5e5;
+    --white: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    max-width: 100%;
+}
+
+.container > div:nth-child(odd) {
+    background-color: var(--light-color);
+}
+.container > div:nth-child(even) {
+    background-color: var(--dark-color);
+}
+
+#freelancing , #education , 
+#skills , #links , #interests , 
+#certifications , #projects , #contact-me {
+    height: 100vh;
+    width: 100%;
+    /* background-color: black; */
+}
+
+#about-me {
+    height: 90vh;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    z-index: -10;
+    background-color: var(--dark-color)!important;
+}
+
+.nav-bar {
+    height: 10vh;
+    width: 100%;
+    background-color: black!important;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.nav-bar div {
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    /* border: 2px solid white; */
+    /* cursor: pointer; */
+    font-family: var(--dark-font);
+}
+
+.nav-bar div > a {
+    color: white;
+    text-decoration: none;
+    /* font-size: 25px; */
+    transition: all 0.1s;
+}
+
+.nav-bar div > a:hover {
+    border-bottom: 4px solid white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px grey;
+}
+
+.nav-bar-selected {
+    border-bottom: 4px solid white;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px grey;
+}
+
+
+.myPic , .about-content {
+    /* border: 2px solid; */
+    /* background-color: green; */
+    height: 100%;
+}
+
+.about-content {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.myPic {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid; */
+}
+
+.image-myPic {
+    background-image: url("Images/myPic.png");
+    height: 25vw;
+    width: 25vw;
+    border-radius: 50%;
+    /* box-shadow: 10px 10px 10px black; */
+    background-color: #212529;
+    background-size: cover;
+}
+
+.window {
+    height: 80%;
+    width: 80%;
+    border-radius: 1rem;
+    box-shadow: 4px 4px 6px black;
+}
+
+.window-nav {
+    /* border: 1px solid black; */
+    border-radius: 1rem 1rem 0rem 0rem;
+    height: 6%;
+    width: 100%;
+    background-color: var(--off-white);
+    display: flex;
+    align-items: center;
+}
+
+.window-nav div {
+    height: 1.1rem;
+    width: 1.1rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+}
+
+.close-btn {
+    background-color: #f73939;
+}
+
+.minimize-btn {
+    background-color: #f9dc5c;
+}
+
+.fullscreen-btn {
+    background-color: #70e000;
+    cursor: pointer;
+}
+
+.window-content {
+    border-radius: 0rem 0rem 1rem 1rem;
+    background-color: var(--white);
+    width: 100%;
+    height: 94%;
+}
+
+.typer-section {
+    width: 100%;
+    height: 100%;
+    font-family: var(--light-font);
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.typer-section div:nth-child(2){
+    display: flex;
+    justify-content: center;
+} 
+
+.typer {
+    /* border: 1px solid; */
+    margin-left: 15px;
+    color: var(--super-dark-color);
+}
+
+.typer::after {
+    content: "";
+    width: 1px;
+    border-right: 3px solid black;
+    animation: blink 1s infinite ease;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+span.name {
+    font-family: var(--dark-font);
+    font-size: 3rem;
+    text-shadow: 2px 2px 4px grey;
+}
+span.hey {
+    color: var(--super-dark-color);
+}
