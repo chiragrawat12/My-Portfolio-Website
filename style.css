@@ -1,6 +1,7 @@
 :root {
     --dark-font: 'Pattaya', sans-serif;
     --light-font: 'Roboto', sans-serif;
+    --montserrat: 'Montserrat', sans-serif;
     --dark-color: #a06cd5;
     --light-color: #c19ee0;
     --super-dark-color: #6247aa;
@@ -75,8 +76,7 @@ body {
 .nav-bar div > a {
     color: white;
     text-decoration: none;
-    /* font-size: 25px; */
-    transition: all 0.1s;
+    transition: all 0.2s;
 }
 
 .nav-bar div > a:hover {
@@ -157,7 +157,6 @@ body {
 
 .fullscreen-btn {
     background-color: #70e000;
-    cursor: pointer;
 }
 
 .window-content {
@@ -177,24 +176,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
 }
 
-.typer-section div:nth-child(2){
-    display: flex;
-    justify-content: center;
-} 
 
 .typer {
-    /* border: 1px solid; */
     margin-left: 15px;
     color: var(--super-dark-color);
+    font-size: 3rem;
 }
 
 .typer::after {
     content: "";
     width: 1px;
-    border-right: 3px solid black;
+    border-right: 3px solid var(--super-dark-color);
     animation: blink 1s infinite ease;
 }
 
@@ -209,10 +203,9 @@ body {
 }
 
 span.name {
-    font-family: var(--dark-font);
-    font-size: 3rem;
-    text-shadow: 2px 2px 4px grey;
-}
-span.hey {
+    font-family: var(--montserrat);
+    font-size: 5rem;
+    font-weight: 400;
     color: var(--super-dark-color);
+    /* text-shadow: 2px 2px 4px grey; */
 }

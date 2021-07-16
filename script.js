@@ -27,27 +27,49 @@ window.addEventListener("scroll" , function(e) {
 });
 
 
-let texts = ["Web Development" , "Software Development" , "Tester"];
+let texts = ["Web Development." , "Software Development." , "Problem Solving." , "Cyber Security."];
 let currText = "";
 
 let index = 0;
 let count = 0;
 let letter = "";
 let typerDiv = document.querySelector(".typer");
+let reverse = false;
 
-(function typer(){
+(async function typer(){
     if(count === texts.length){
         count = 0;
     }
 
     currText = texts[count];
-    letter = currText.slice(0,++index);
+
+    if(reverse === true){
+        letter = currText.slice(0,--index);
+    }else{
+        letter = currText.slice(0,++index);
+    }
     
     typerDiv.innerText = letter;
     
-    if(currText.length === letter.length){
+    if(letter.length === 0 && reverse === true){
         index = 0;
         count ++;
+        reverse = false;
     }
-    setTimeout(typer , 400);
+    if(letter.length === currText.length){
+        reverse = true;
+        await new Promise(resolve => setTimeout(resolve, 1500));
+    }
+
+    if(reverse === false){
+        setTimeout(typer , 200);
+    }
+
+    else{
+        setTimeout(typer , 50);
+    }
 }())
+
+
+
+
