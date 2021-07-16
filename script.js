@@ -1,3 +1,5 @@
+let wrapperDiv = document.querySelector(".wrapper");
+
 let sections = document.querySelectorAll(".section");
 let navBarDivsA = document.querySelectorAll(".nav-bar div > a");
 
@@ -73,3 +75,41 @@ let reverse = false;
 
 
 
+let resume = document.querySelector(".resume");
+
+resume.addEventListener("click" , function(e) {
+    wrapperDiv.style.display = "block";
+
+    let div = document.createElement("div");
+    let iframe = document.createElement("iframe");
+
+    div.classList.add("wrapper-resume-div");
+    iframe.name = "show-resume";
+    iframe.width = "70%";
+    iframe.height = "98%"
+    iframe.frameBorder = 0;
+
+    div.appendChild(iframe);
+    wrapperDiv.appendChild(div);
+    download("Resume/MyResume.pdf");
+});
+
+function download(url) {
+    window.open(url , 'show-resume');
+}
+
+
+
+let wrapperCloseBtn = wrapperDiv.querySelector(".wrapper-close");
+
+
+wrapperCloseBtn.addEventListener("click" , function(e) {
+    let children = wrapperDiv.children;
+
+    for(let i = 1 ; i < children.length ; i++){
+        children[i].remove();
+    }
+
+
+    wrapperDiv.style.display = "none";
+});
