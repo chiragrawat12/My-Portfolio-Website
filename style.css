@@ -360,12 +360,12 @@ span.name {
 }
 
 .card-front span {
-    font-size: 6rem;
+    font-size: 4rem;
     color: white;
 }
 
 .card-front div {
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: white;
 }
 
@@ -471,6 +471,35 @@ span.name {
     background-position: center;
     background-size: contain;
     border-radius: 1rem 1rem 0rem 0rem;
+}
+
+.inter-card-img {
+    width: 6.5rem;
+    height: 6.5rem;
+    color: var(--white);
+    /* border: 2px solid; */
+    background-image: url("Images/school.png");
+    background-position: center;
+    background-size: contain;
+}
+
+.high-school-card-img {
+    width: 6.5rem;
+    height: 6.5rem;
+    color: var(--white);
+    /* border: 2px solid; */
+    background-image: url("Images/school.png");
+    background-position: center;
+    background-size: contain;
+}
+.clg-card-img {
+    width: 6.5rem;
+    height: 6.5rem;
+    color: var(--white);
+    /* border: 2px solid; */
+    background-image: url("Images/graduation.png");
+    background-position: center;
+    background-size: contain;
 }
 
 
