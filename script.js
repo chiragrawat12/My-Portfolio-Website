@@ -91,7 +91,7 @@ resume.addEventListener("click" , function(e) {
 
     div.appendChild(iframe);
     wrapperDiv.appendChild(div);
-    download("Resume/MyResume.pdf");
+    download("Resume/Resume-Purple-ChiragSingh.pdf");
 });
 
 function download(url) {
